@@ -1,0 +1,48 @@
+.todo{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5rem;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+.todo li{
+    flex:1 ;
+    padding: 0rem .5rem;
+    font-size: 2rem;
+}
+
+.fa-check,fa-trash{
+    pointer-events: none;
+}
+
+.complete,.trash{
+    background-color: #ff6f47;
+    color: #fff;
+    border: none;
+    border-radius: 0%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+.complete:hover{
+    background-color:rgb(1, 136, 102);
+}
+.trash:hover{
+    background-color:#e63302;
+}
+.complete{
+    border-right: 1px solid white;
+    background-color: rgb(11,212,162);
+}
+.completed{
+    text-decoration: line-through;
+    opacity: .4;
+}
+
+.fall{
+    
+    transform: translateY(10rem) rotateZ(20deg);
+    
+}

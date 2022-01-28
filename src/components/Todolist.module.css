@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container ul{
+    list-style: none;
+    min-width:50%;
+    
+}
