@@ -1,6 +1,10 @@
 a simple todo app whit react.js
 
-features :
+features : 
+
 add task
+
 complete task
+
 remove task
+
