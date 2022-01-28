@@ -1,10 +1,11 @@
-a simple todo app whit react.js
+# Todo App
+Simple ReactJs task manager 🔥
 
-features : 
+---
 
-add task
+### Features
 
-complete task
-
-remove task
-
+- Create a task
+- Mark as completed
+- Delete a task
+- Data saved through local storage 
