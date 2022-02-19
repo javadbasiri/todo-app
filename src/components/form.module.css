@@ -4,15 +4,11 @@
     align-items: center;
     min-height: 20vh;
     margin-top: 2rem;
+    width: 100%;
+    margin: auto;
 }
 
-.inputContainer{
-    width:90%;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+
 
 .form input,
 .form button{
@@ -86,7 +82,11 @@
         flex-direction: column;
     }
 
-    /* .todoinput{
-        width: 85%;
-    } */
+    .inputContainer{
+        width:90%;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
