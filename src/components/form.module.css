@@ -6,6 +6,8 @@
     margin-top: 2rem;
 }
 
+
+
 .form input,
 .form button{
     border:none;
@@ -15,9 +17,7 @@
     background-color: white;
     border-radius: 0;
 }
-.todoinput{
-    border: 1px solid #ff6f47;
-}
+
 .todoinput::placeholder{
     color:#eeeeee;
     font-size: 1.5rem;
@@ -66,7 +66,7 @@
     right:0;
     background-color: #ff6f47;
     color: white;
-    padding: 1rem;
+    padding: 1.3rem;
     cursor: pointer;
     pointer-events: none;
 }
@@ -75,4 +75,8 @@
     .form{
         flex-direction: column;
     }
+
+    /* .todoinput{
+        width: 85%;
+    } */
 }
