@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Todolist.module.css"
 import Todo from "./todo"
-const TodoList = ({ todos,setTodos,filterTodo })=>{
+const TodoList = ({ todos,setTodos,filterTodo})=>{
     return(
         <div className={styles.container}>
             <ul>

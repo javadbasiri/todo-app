@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 20vh;
+    margin-top: 2rem;
 }
 
 .form input,
@@ -17,6 +18,10 @@
 .todoinput{
     border: 1px solid #ff6f47;
 }
+.todoinput::placeholder{
+    color:#eeeeee;
+    font-size: 1.5rem;
+}
 .form button{
     color:#ff6f47;
     transition: .5s;
@@ -30,6 +35,17 @@
     margin: 1rem;
     position: relative;
     overflow: hidden;
+    animation:animate .3s forwards ;
+}
+@keyframes animate{
+    from {
+        transform:translateY(-100px);
+        opacity:0
+    }
+    to {
+        transform:translateY(0);
+        opacity:1
+    }
 }
 
 .filtertodo{
@@ -53,4 +69,10 @@
     padding: 1rem;
     cursor: pointer;
     pointer-events: none;
+}
+
+@media screen and (max-width:480px){
+    .form{
+        flex-direction: column;
+    }
 }

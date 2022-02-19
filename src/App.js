@@ -41,7 +41,7 @@ const App=()=>{
             setStatus={setStatus}
             
             />
-            <TodoList todos={todos} setTodos={setTodos} filterTodo={filterTodo}/>
+            <TodoList todos={todos} setTodos={setTodos} filterTodo={filterTodo} setFilterTodo={setFilterTodo}/>
         </div>
        
     )

@@ -25,10 +25,13 @@ const Form = ({setInputText,setTodos,inputText,todos,setStatus})=>{
 
     return(
             <form className={styles.form}>
-                <input value={inputText} type="text" className={styles.todoinput} onChange={inputTextHandler}   />
-                <button onClick={clickHandler} type="submit" className={styles.todobutton}>
-                    <i className="fas fa-plus-square"></i>
-                </button>
+                <div className={styles.inputContainer}>
+                    <input value={inputText} type="text" className={styles.todoinput} onChange={inputTextHandler} placeholder="ADD TASK"  />
+                    <button onClick={clickHandler} type="submit" className={styles.todobutton}>
+                        <i className="fas fa-plus-square"></i>
+                    </button>
+                </div>
+                {todos.length !== 0 && 
                 <div className={styles.select}>
                     <select onChange={statusHandler} name="todo" className={styles.filtertodo}>
                         <option value="all">All</option>
@@ -36,6 +39,7 @@ const Form = ({setInputText,setTodos,inputText,todos,setStatus})=>{
                         <option value="uncompleted">Uncompleted</option>
                     </select>
                 </div>
+                }
             </form>
     )
 }

@@ -5,6 +5,6 @@
 }
 .container ul{
     list-style: none;
-    min-width:50%;
-    
+    width:90%;
+    transition: all .4s;
 }
