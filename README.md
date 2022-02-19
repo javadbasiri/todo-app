@@ -8,4 +8,3 @@ Simple ReactJs task manager 🔥
 - Create a task
 - Mark as completed
 - Delete a task
-- Data saved through local storage 
