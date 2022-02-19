@@ -22,7 +22,7 @@
 
 .todoinput{
     flex:1;
-    border:2px solid red
+    width: 70%;
 }
 
 .todoinput::placeholder{
