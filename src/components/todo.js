@@ -70,29 +70,11 @@ const Todo =({todo ,todos ,setTodos})=>{
     }
 
 
-    const generateColor = ()=>{
-        let values = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
-        let color = "#"
-
-        for(let i = 0 ; i<4 ; i++){
-            let x = Math.round(Math.random() * 15);
-            let y =  values[x]
-
-            color += y
-        }
-
-        setColor(color)
-    }
-
-    useEffect(()=>{
-        generateColor();
-    },[])
-
     
 
     return(
         <>
-        <div style={{backgroundColor:`${color}ff`}} className={todo.delete ? "todo-container deleted" : show ? "todo-container show" : "todo-container" }>
+        <div style={{background:todo.color}} className={todo.delete ? "todo-container deleted" : show ? "todo-container show" : "todo-container" }>
             <div className="header">
                 <div className="todo-title">
                     <label>

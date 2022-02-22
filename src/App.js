@@ -16,12 +16,25 @@ const App=()=>{
             description:"You Can Add , Edit , Remove and Filter Tasks.",
             id:randomNumber(),
             completed:false,
-            delete:false
+            delete:false,
+            color:"#ff69b4"
     }])
     const [status , setStatus]=useState("")
     const [filterTodo , setFilterTodo]=useState([]) 
 
-  
+    const generateColor = ()=>{
+        let values = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+        let color = "#"
+
+        for(let i = 0 ; i<4 ; i++){
+            let x = Math.round(Math.random() * 15);
+            let y =  values[x]
+
+            color += y
+        }
+
+        return(color)
+    }
 
     const addHandler =()=>{
         if(taskInfo.title === "")return;
@@ -30,7 +43,8 @@ const App=()=>{
             description:taskInfo.description,
             id:randomNumber(),
             completed:false,
-            delete:false
+            delete:false,
+            color:`${generateColor()}ff`
         })
         setShowModal(false)
         setTaskInfo({title:"",description:""})
