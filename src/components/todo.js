@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import "./Todo.css"
+import "./todo.css"
 
 const Todo =({todo ,todos ,setTodos})=>{
 
