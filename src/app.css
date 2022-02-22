@@ -1,0 +1,132 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    flex-direction: column;
+}
+.add-task{
+    width:4rem;
+    height: 4rem;
+    margin-top: 1.5rem;
+    padding:0;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    animation: pulse 1.2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 #ff69b4;
+    }
+    75%{
+        box-shadow:0 0 0 16px #ff69b400
+    }
+    
+}
+
+.container i{
+    font-size: 4rem;
+    color: #ff69b4;
+    
+}
+
+.filter{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.filter div{
+    display: flex;
+    align-items: center;
+}
+.filter div label{
+    margin-right: .3rem;
+}
+.filter div input{
+    background-color: black;
+}
+
+.modal{
+    width: 50%;
+    position: absolute;
+    top:10rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(255,255,255,1);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    animation: animate .4s forwards;
+    
+}
+@keyframes animate {
+    from{
+        transform: translateY(-300%);
+    }
+    to{
+        transform: translateY(0);
+    }
+    
+}
+
+
+.title,.des{
+    width: 100%;
+    height: 3rem;
+    border-radius: .2rem;
+    overflow: hidden;
+    border: 1px solid silver;
+    margin-bottom: .6rem;
+}
+
+
+
+.title input,.des input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left:1rem ;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+.buttons{
+    padding:2rem;
+    
+}
+
+.buttons button{
+    padding:.5rem 1.5rem ;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    border-radius: .3rem;
+}
+.add{
+    background-color:#1ac0a2;
+    color: white;
+}
+
+.cancel{
+    background-color:rgb(255, 75, 75);
+    color: white;
+}
+
+@media screen and (max-width:480px){
+    .modal{
+        width: 90%;
+    }
+}

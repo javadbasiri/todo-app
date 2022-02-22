@@ -1,78 +1,109 @@
-.todo{
+.todo-container{
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
     display: flex;
-    flex-direction: row;
-    margin-bottom: .5rem;
+    flex-direction: column;
+    padding:1rem;
+    margin-bottom: 1rem;
+    height: 4.5rem;
+    overflow: hidden;
+    transition: all .4s;
+    animation: todo .3s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes todo {
+    from{
+        transform: translateX(-200%);
+        
+    }
+    to{
+        transform: translateX(0);
+    
+    }
+}
+@keyframes del {
+    from{
+        transform: translateY(0) rotateZ(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(5rem) rotateZ(-20deg);
+        opacity: 0;
+    }
+}
+.deleted{
+    animation: del .3s forwards;
+}
+.todo-container.show{
+    height:fit-content;
+}
+
+.header{
+    display: flex;
     align-items: center;
-    background-color: #fff;
     justify-content: space-between;
-    width:50%;
-    /* transition: all 1s; */
-    animation:animate .5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-@keyframes animate{
-    from{
-        transform:translateX(-200%);
-        opacity: 0;
-    }
-    to{
-        transform:translateY(0);
-        opacity: 1;
-    }
 }
 
-.todo li{
-    flex:1 ;
-    padding: 0rem .5rem;
-    font-size: 1.3rem;
-    word-wrap:break-word;
-    word-break:break-all;
+.todo-title{
+    display: flex;
+    align-items: center;
 }
 
-.fa-check,fa-trash{
-    pointer-events: none;
+.todo-title li{
+    margin-left: .5rem;
+    font-size: 2rem;
 }
 
-.complete,.trash{
-    background-color: #ff6f47;
-    color: #fff;
-    border: none;
-    border-radius: 0%;
-    padding: 1rem;
-    cursor: pointer;
-    transition: all .5s;
-}
-.complete:hover{
-    background-color:rgb(1, 136, 102);
-}
-.trash:hover{
-    background-color:#e63302;
-}
-.complete{
-    border-right: 1px solid white;
-    background-color: rgb(11,212,162);
-}
 .completed{
+    color: white;
     text-decoration: line-through;
-    opacity: .4;
 }
 
-.fall{
-    animation: del 1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+.edit i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all .3s;
 }
 
-@keyframes del{
-    from{
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to{
-        transform: translateY(10rem);
-        opacity: 0;
-    }
+.angle{
+    transform: rotate(180deg);
 }
 
-@media screen and (max-width:480px){
-    .todo{
-        width: 100%;
-    }
+.fa-pen-to-square{
+    color:rgb(2, 202, 2);
+}
+.fa-trash-can{
+    color: rgb(255, 75, 75);
+}
+
+.details p{
+    font-size: 1.2rem;
+    padding:.6rem 2rem;
+    text-align: justify;
+}
+
+.check-input{
+    position: absolute;
+    transform: scale(0);
+}
+label{
+    cursor: pointer;
+}
+.checkbox{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 4px solid white;
+    transition: all .3s;
+}
+.checked{
+    transform:rotate(45deg);
+    width: 1rem;
+    /* border-color:#1ac0a2; */
+    border-color: rgb(2, 202, 2);
+    border-top-color: transparent;
+    border-left-color: transparent;
 }
