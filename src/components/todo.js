@@ -99,7 +99,7 @@ const Todo =({todo ,todos ,setTodos})=>{
                         <input className="check-input" onClick={completeHandler} type="checkbox"/>
                         <span className={todo.completed ? "checked checkbox" : "checkbox"}></span>
                     </label>
-                    <li className={todo.completed && "completed"}>{todo.title}</li>
+                    <li className={todo.completed ? "completed" : ""}>{todo.title}</li>
                 </div>
                 <div className="edit">
                     {todo.description && 
