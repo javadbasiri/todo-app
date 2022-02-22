@@ -1,8 +1,14 @@
 .wrapper{
     display: flex;
-    gap:2rem;
+    /* gap:2rem; */
     justify-content: space-between;
     margin:3rem 0;
+    width: 50%;
+}
+@media screen and (max-width:480px) {
+    .wrapper{
+        width: 70%;
+    }
 }
 
 label{
@@ -44,7 +50,7 @@ label{
 }
 
 .radio-label{
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: silver;
 }
 

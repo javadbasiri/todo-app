@@ -4,16 +4,24 @@ import Filter from "./components/Filter";
 import "./app.css";
 const App=()=>{
 
-    const [showModal , setShowModal] = useState(false);
-    const [taskInfo , setTaskInfo] = useState({title:"",description:""})
-    const [todos , setTodos] = useState([])
-    const [status , setStatus]=useState("")
-    const [filterTodo , setFilterTodo]=useState([]) 
-
     const randomNumber = ()=>{
         const random = Math.floor(Math.random() * 10000);
         return random;
     }
+
+    const [showModal , setShowModal] = useState(false);
+    const [taskInfo , setTaskInfo] = useState({title:"",description:""})
+    const [todos , setTodos] = useState([{
+            title:"TODO APP",
+            description:"You Can Add , Edit , Remove and Filter Tasks.",
+            id:randomNumber(),
+            completed:false,
+            delete:false
+    }])
+    const [status , setStatus]=useState("")
+    const [filterTodo , setFilterTodo]=useState([]) 
+
+  
 
     const addHandler =()=>{
         if(taskInfo.title === "")return;
@@ -58,6 +66,7 @@ const App=()=>{
                 <button className="add-task" onClick={()=>setShowModal(!showModal)}>
                     <i className="fa-solid fa-circle-plus"></i>
                 </button>
+
                 <Filter radioHandler={radioHandler}/>
                
                 {showModal && 

@@ -56,7 +56,7 @@ const Todo =({todo ,todos ,setTodos})=>{
                 if(item.id === todo.id){
                     return{
                         ...item,
-                        title:updateTask.title ? updateTask.title : item.title,
+                        title:updateTask.title ? updateTask.title.toUpperCase() : item.title,
                         description:updateTask.description ? updateTask.description : item.description
                     }
                     
